@@ -11,24 +11,25 @@ Benefits of using bookbinder are as follows:
 * Verifies a composed book is free of any dead links.
 
 ##Getting Started with Bookbinder ##
+
 1. Get started with using bookbinder by first cloning the main Cloud Foundry Documentation Repository from [github](https://github.com/cloudfoundry/docs-book-cloudfoundry).
 
 2. Fork and clone or create a repository for documentation being written. Keep in mind the directory that is being cloned or created needs to be a directory that is a sibling to this book repository. If documentation were being conributed to buildpacks, the file structure would look like the following locally:
 
-<pre>
-|
-+-- docs-book-cloudfoundry
-|
-+-- docs-buildpacks
-|
-</pre>
+	<pre>
+	|
+	+-- docs-book-cloudfoundry
+	|
+	+-- docs-buildpacks
+	|
+	</pre>
 
 3. Run bookbinder on local changes:
-<pre>
-$ cd docs-book-cloudfoundry
-$ bundle install
-$ bundle exec bookbinder watch
-</pre>
+	<pre>
+	$ cd docs-book-cloudfoundry
+	$ bundle install
+	$ bundle exec bookbinder watch
+	</pre>
 Bookbinder assembles the document set from local copies.
 It skips any topic repositories that are not checked out. For more information on Bookbinder, see the [Bookbinder README](https://github.com/pivotal-cf/bookbinder#bookbinder). 
 
