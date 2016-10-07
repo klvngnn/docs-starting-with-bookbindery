@@ -1,37 +1,38 @@
 This topic describes what is Bookbinder, why it's used, and how to get started with it.
 For detailed documentation and source code see Bookbinder's [github repository](https://github.com/pivotal-cf/bookbinder).
 
-##<a id ="What"></a> What is Bookbinder? ##
+##What is Bookbinder? ##
 Bookbinder is a gem that binds together a unified documentation web application from disparate source material. Source material can be in markdown, HTML, or DITA. All materials must be stored in local directories or in git repositories. Bookbinder runs [middleman](http://www.middlemanapp.com) to produce a Rack app that you can deploy to Cloud Foundry.
 
-##<a id= "Why"></a> Why is Bookbinder used? ##
+##Why is Bookbinder used? ##
 Benefits of using bookbinder are as follows: 
-	* Allows documentation to be pulled together to form one uniformly templated web application.
-	* Provides scripts for running on a Continuous Integration system that can detect when a documentation repository has been updated with new content.
-	* Verifies a composed book is free of any dead links.
+* Allows documentation to be pulled together to form one uniformly templated web application.
+* Provides scripts for running on a Continuous Integration system that can detect when a documentation repository has been updated with new content.
+* Verifies a composed book is free of any dead links.
 
-##<a id="How"></a> Getting Started with Bookbinder ##
-	1.Get started with using bookbinder by first cloning the main Cloud Foundry Documentation Repository from [github](https://github.com/cloudfoundry/docs-book-cloudfoundry).
+##Getting Started with Bookbinder ##
+1. Get started with using bookbinder by first cloning the main Cloud Foundry Documentation Repository from [github](https://github.com/cloudfoundry/docs-book-cloudfoundry).
 
-	1.Fork and clone or create a repository for documentation being written. Keep in mind the directory that is being cloned or created needs to be a directory that is a sibling to this book repository. If documentation were being conributed to buildpacks, the file structure would look like the following on your local computer:
-		<pre>
-	    |
-	    +-- docs-book-cloudfoundry
-	    |
-	    +-- docs-buildpacks
-	    |
-	  </pre>
+2. Fork and clone or create a repository for documentation being written. Keep in mind the directory that is being cloned or created needs to be a directory that is a sibling to this book repository. If documentation were being conributed to buildpacks, the file structure would look like the following locally:
 
-	1.Run bookbinder on local changes:
-  <pre>
+<pre>
+   |
+   +-- docs-book-cloudfoundry
+   |
+   +-- docs-buildpacks
+   |
+</pre>
+
+3. Run bookbinder on local changes:
+	<pre>
     $ cd docs-book-cloudfoundry
     $ bundle install
     $ bundle exec bookbinder watch
   </pre>
-  Bookbinder assembles the document set from local copies.
-  It skips any topic repositories that are not checked out. For more information on Bookbinder, see the [Bookbinder README](https://github.com/pivotal-cf/bookbinder#bookbinder). 
+Bookbinder assembles the document set from local copies.
+It skips any topic repositories that are not checked out. For more information on Bookbinder, see the [Bookbinder README](https://github.com/pivotal-cf/bookbinder#bookbinder). 
 
-	1.Point the browser at <code>localhost:4567</code> to preview changes. On save, the browser will reload with any additional changes made. The url <code>localhost:4567/__middleman</code> can be used to view resources and links that are available for viewing.
+4. Point the browser at <code>localhost:4567</code> to preview changes. On save, the browser will reload with any additional changes made. The url <code>localhost:4567/__middleman</code> can be used to view resources and links that are available for viewing.
 
 
 
