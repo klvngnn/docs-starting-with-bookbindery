@@ -1,10 +1,17 @@
+In this topic:
+
+* [What is Bookbinder](#what-is-bookbinder)
+* [Why is Bookbinder Used?](#why-is-bookbinder-used)
+* [Getting Started With Bookbinder](#getting-started-with-bookbinder)
+
+
 This topic describes what is Bookbinder, why it's used, and how to get started with it.
 For detailed documentation and source code see Bookbinder's [github repository](https://github.com/pivotal-cf/bookbinder).
 
 ##What is Bookbinder? ##
 Bookbinder is a gem that binds together a unified documentation web application from disparate source material. Source material can be in markdown, HTML, or DITA. All materials must be stored in local directories or in git repositories. Bookbinder runs [middleman](http://www.middlemanapp.com) to produce a Rack app that you can deploy to Cloud Foundry.
 
-##Why is Bookbinder used? ##
+##Why is Bookbinder Used? ##
 Benefits of using bookbinder are as follows: 
 * Allows documentation to be pulled together to form one uniformly templated web application.
 * Provides scripts for running on a Continuous Integration system that can detect when a documentation repository has been updated with new content.
